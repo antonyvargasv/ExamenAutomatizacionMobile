@@ -30,45 +30,39 @@ public class DetalleProductoScreen extends PageObject {
 
 
     public void selectProduct(String UNIDADES, String PRODUCTO) {
-        System.out.println(UNIDADES+"-aquiScreen" + PRODUCTO);
-        switch (PRODUCTO){
+        switch (PRODUCTO) {
             case "Sauce Labs Backpack":
                 itemProduct01.click();
-                System.out.println("producto no encontrado Sauce Labs Backpack"+ UNIDADES + PRODUCTO);
                 break;
             case "Sauce Labs Bolt - T-Shirt":
                 itemProduct02.click();
-                System.out.println("producto no encontrado Sauce Labs Bolt - T-Shirt"+ UNIDADES + PRODUCTO);
                 break;
             case "Sauce Labs Bike Light":
                 itemProduct03.click();
-                System.out.println("producto no encontrado02"+ UNIDADES + PRODUCTO);
                 break;
             default:
-                System.out.println("no hay producto"+ UNIDADES + PRODUCTO);
                 break;
         }
 
     }
 
-    public void increaseProducts(String UNIDADES){
+    public void increaseProducts(String UNIDADES) {
         waitFor(ExpectedConditions.visibilityOf(btnContador));
-        for (int i = 1; i< Integer.parseInt(UNIDADES); i++){
+        for (int i = 1; i < Integer.parseInt(UNIDADES); i++) {
             btnContador.click();
-            System.out.println(i);
         }
     }
-    public void addCard(){
+
+    public void addCard() {
         waitFor(ExpectedConditions.visibilityOf(btnAddToCart));
         btnAddToCart.click();
     }
 
 
-    public void cartProducts(){
+    public void cartProducts() {
         waitFor(ExpectedConditions.visibilityOf(cartProducts));
         cartProducts.click();
     }
-
 
 
     public boolean validarIngresoAlDetalle() {

@@ -11,11 +11,15 @@ public class MyCartScreen extends PageObject {
     @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.saucelabs.mydemoapp.android:id/cartTV\"]")
     private WebElement contadorCart;
 
-    public String valorContador() {
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.saucelabs.mydemoapp.android:id/noTV\"]")
+    private WebElement lblCantUnidades;
+
+
+    public boolean valorContador() {
         waitFor(ExpectedConditions.visibilityOf(contadorCart));
         String contador = contadorCart.getText();
-        System.out.println("el contador es: " + contador);
-        return contador;
+        String cantUnidades = lblCantUnidades.getText();
+        return contador.equals(cantUnidades);
     }
 
 }

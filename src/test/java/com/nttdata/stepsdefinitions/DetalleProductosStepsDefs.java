@@ -9,16 +9,15 @@ import net.serenitybdd.annotations.Steps;
 public class DetalleProductosStepsDefs {
     @Steps
     DetalleProductsSteps detalleProductsSteps;
+
     @When("agrego {string} del siguiente producto {string}")
     public void agregoDelSiguienteProducto(String UNIDADES, String PRODUCTO) {
-        System.out.println(UNIDADES+"-Aquii" + PRODUCTO);
-       detalleProductsSteps.selectProduct(UNIDADES, PRODUCTO);
+        detalleProductsSteps.selectProduct(UNIDADES, PRODUCTO);
         detalleProductsSteps.validarIngresoDetalle();
-       detalleProductsSteps.increaseProducts(UNIDADES);
-       detalleProductsSteps.btnaddCartClic();
-       detalleProductsSteps.cartProductsClic();
+        detalleProductsSteps.increaseProducts(UNIDADES);
+        detalleProductsSteps.btnaddCartClic();
+        detalleProductsSteps.cartProductsClic();
     }
-
 
 
 }

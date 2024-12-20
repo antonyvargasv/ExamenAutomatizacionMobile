@@ -12,7 +12,7 @@ public class ProductsStepsDefs {
     ProductsSteps carritoCompraSteps;
 
     @Given("estoy en la aplicación de SauceLabs")
-    public void estoyEnLaAplicacionDeSauceLabs()  {
+    public void estoyEnLaAplicacionDeSauceLabs() {
         carritoCompraSteps.validateApp();
     }
 
@@ -20,6 +20,5 @@ public class ProductsStepsDefs {
     public void validoQueCarguenCorrectamenteLosProductosEnLaGaleria() {
         carritoCompraSteps.validateProducts();
     }
-
 
 }
