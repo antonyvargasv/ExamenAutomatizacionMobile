@@ -13,6 +13,7 @@ public class DetalleProductosStepsDefs {
     public void agregoDelSiguienteProducto(String UNIDADES, String PRODUCTO) {
         System.out.println(UNIDADES+"-Aquii" + PRODUCTO);
        detalleProductsSteps.selectProduct(UNIDADES, PRODUCTO);
+        detalleProductsSteps.validarIngresoDetalle();
        detalleProductsSteps.increaseProducts(UNIDADES);
        detalleProductsSteps.btnaddCartClic();
        detalleProductsSteps.cartProductsClic();

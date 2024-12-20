@@ -2,6 +2,7 @@ package com.nttdata.screens;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import net.serenitybdd.core.pages.PageObject;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -70,4 +71,8 @@ public class DetalleProductoScreen extends PageObject {
 
 
 
+    public boolean validarIngresoAlDetalle() {
+        waitFor(ExpectedConditions.visibilityOf(btnAddToCart));
+        return btnAddToCart.isEnabled();
+    }
 }

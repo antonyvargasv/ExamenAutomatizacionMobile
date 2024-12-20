@@ -14,13 +14,11 @@ public class ProductsStepsDefs {
     @Given("estoy en la aplicación de SauceLabs")
     public void estoyEnLaAplicacionDeSauceLabs()  {
         carritoCompraSteps.validateApp();
-        System.out.println("1");
     }
 
     @And("valido que carguen correctamente los productos en la galeria")
     public void validoQueCarguenCorrectamenteLosProductosEnLaGaleria() {
         carritoCompraSteps.validateProducts();
-        System.out.println("2");
     }
 
 

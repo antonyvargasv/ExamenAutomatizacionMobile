@@ -1,6 +1,7 @@
 package com.nttdata.steps;
 
 import com.nttdata.screens.DetalleProductoScreen;
+import com.nttdata.screens.MyCartScreen;
 
 public class DetalleProductsSteps {
     DetalleProductoScreen detalleProductoScreen;
@@ -18,5 +19,10 @@ public class DetalleProductsSteps {
     public void cartProductsClic(){
         detalleProductoScreen.cartProducts();
     }
+
+    public void validarIngresoDetalle() {
+        detalleProductoScreen.validarIngresoAlDetalle();
+    }
+
 
 }
