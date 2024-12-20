@@ -8,5 +8,9 @@ Feature: Carrito de compras MyDemoApp
     #Then valido el carrito de compra actualice correctamente
     Examples:
       | PRODUCTO                  | UNIDADES |
-      | Sauce Labs Backpack       | 1        |
+      | Sauce Labs Bolt - T-Shirt | 2        |
+ #     | Sauce Labs Bike Light     | 3        |
+#      | Sauce Labs Backpack       | 1        |
+#      | Sauce Labs Bolt - T-Shirt | 2        |
+
 
