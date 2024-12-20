@@ -11,13 +11,13 @@ public class DetalleProductosStepsDefs {
     DetalleProductsSteps detalleProductsSteps;
     @When("agrego {string} del siguiente producto {string}")
     public void agregoDelSiguienteProducto(String UNIDADES, String PRODUCTO) {
-        detalleProductsSteps.selectProduct(UNIDADES, PRODUCTO);
-        detalleProductsSteps.addToCart();
-        detalleProductsSteps.cartProductsClic();
+        System.out.println(UNIDADES+"-Aquii" + PRODUCTO);
+       detalleProductsSteps.selectProduct(UNIDADES, PRODUCTO);
+       detalleProductsSteps.increaseProducts(UNIDADES);
+       detalleProductsSteps.btnaddCartClic();
+       detalleProductsSteps.cartProductsClic();
     }
 
-    @Then("valido el carrito de compra actualice correctamente")
-    public void validoElCarritoDeCompraActualiceCorrectamente() {
 
-    }
+
 }
